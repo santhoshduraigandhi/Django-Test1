@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            About
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <h1>List Of Bio Database</h1>
+        <table>
+            <tr>
+                <th>Roll No</th>
+                <th>Register No</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                {% for i in details %}
+                <td>{{i.id}}</td>
+                <td>{{i.Regnum}}</td>
+                <td>{{i.Name}}</td>
+                <td>{{i.Department}}</td>
+                <td>{{i.Grade}}</td>
+            </tr>
+        {% endfor %}    
+        </table>
+
+        <!-- search box START-->
+        
+        <!-- search box END-->
+
+    </body>
+</html>
